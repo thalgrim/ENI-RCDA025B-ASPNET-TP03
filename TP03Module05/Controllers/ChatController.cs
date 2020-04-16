@@ -39,7 +39,8 @@ namespace TP03Module05.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
+                Chat chat = Chat.GetMeuteDeChats().FirstOrDefault(x => x.Id == id);
+                Chat.GetMeuteDeChats().Remove(chat);
 
                 return RedirectToAction("Index");
             }
